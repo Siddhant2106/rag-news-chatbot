@@ -6,8 +6,8 @@ const { v4: uuidv4 } = require("uuid");
 class RAGService {
   constructor() {
     this.qdrantClient = new QdrantClient({
-      host: "localhost",
-      port: 6333,
+      url: process.env.QDRANT_URL,
+      apiKey: process.env.QDRANT_API_KEY
     });
     this.parser = new RssParser();
     this.collectionName = "news_articles";
