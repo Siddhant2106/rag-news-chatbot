@@ -14,7 +14,7 @@ const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     origin: process.env.NODE_ENV === 'production' 
-      ? "https://your-frontend-url.onrender.com" 
+      ? "https://rag-news-chatbot-frontend-2x7p.onrender.com" 
       : "http://localhost:3000",
     methods: ["GET", "POST"]
   }
@@ -33,7 +33,7 @@ app.use(limiter);
 // CORS
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? "https://your-frontend-url.onrender.com" 
+    ? "https://rag-news-chatbot-frontend-2x7p.onrender.com" 
     : "http://localhost:3000"
 }));
 
